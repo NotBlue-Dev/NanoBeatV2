@@ -1,0 +1,21 @@
+{
+    "saber":{
+        "bomb":true,
+        "saber":true,
+        "wall":true
+    },
+    "light": {
+        "center": true,
+        "rightRotate": true,
+        "leftRotate" : true,
+        "backlaser": true,
+        "off": true,
+        "blueFull": true,
+        "blueFadeIn": true,
+        "blueFadeOut": true,
+        "redFull": true,
+        "redFadeIn": true,
+        "redFadeOut": true
+    }
+}
+

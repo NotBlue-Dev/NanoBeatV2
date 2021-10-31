@@ -1,0 +1,32 @@
+{
+  "name": "nanobeat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotBlue-Dev/NanoBeatV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotBlue-Dev/NanoBeatV2/issues"
+  },
+  "homepage": "https://github.com/NotBlue-Dev/NanoBeatV2#readme",
+  "devDependencies": {
+    "electron": "^15.3.0"
+  },
+  "dependencies": {
+    "arp": "^0.0.3",
+    "axios": "^0.24.0",
+    "bonjour": "^3.5.0",
+    "dotenv": "^10.0.0",
+    "local-devices": "^3.0.0",
+    "oui": "^11.0.90",
+    "request": "^2.88.2"
+  }
+}
