@@ -1,5 +1,4 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
-
 const nano = require('./lib')
 
 require('dotenv').config()
@@ -32,6 +31,8 @@ const start = (webContents) => {
   setTimeout(() => {
     nanoleaf.start()
   }, 500);
+
+
 
 }
 
