@@ -29,6 +29,10 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log('auth failed')
     });
 
+    ipcRenderer.on('game-ip-defined', (event, arg) => {
+        console.log(arg)
+    });
+
 
 
 });

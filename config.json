@@ -1,1 +1,19 @@
-{"ip":"192.168.1.56","token":"kEHikFSWGQO1ebkAO8sKYPchQl8d0wov","mode":{"saber":{"bomb":true,"saber":true,"wall":true},"light":{"center":true,"rightRotate":true,"leftRotate":true,"backlaser":true,"off":true,"blueFull":true,"blueFadeIn":true,"blueFadeOut":true,"redFull":true,"redFadeIn":true,"redFadeOut":true}}}
+{"ip":"192.168.1.56","token":"E3AClgkjopb5F1hIeIFXmzz3fxLZKLbe","mode":{
+
+    "center": true,
+    "rightRotate": true,
+    "leftRotate" : true,
+    "backlaser": true,
+    "off": true,
+    "blueFull": true,
+    "blueFadeIn": true,
+    "blueFadeOut": true,
+    "redFull": true,
+    "redFadeIn": true,
+    "redFadeOut": true,
+    "wall":true,
+    "bomb":true,
+    "cut":true
+    
+}
+}
