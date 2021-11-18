@@ -27,12 +27,10 @@ const start = (webContents) => {
     sendEvent,
     listenEvent
   )
-// transform timeout to event
+  // temp
   setTimeout(() => {
     nanoleaf.start()
   }, 500);
-
-
 
 }
 
@@ -54,7 +52,7 @@ const createWindow = () => {
     })
     mainWindow.loadFile('./view/main/index.html')
         .then(() => {
-          dev && mainWindow.webContents.openDevTools()
+          mainWindow.webContents.openDevTools()
           start(mainWindow.webContents)
         })
     .catch((err) => console.error(err))

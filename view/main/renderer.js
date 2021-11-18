@@ -1,7 +1,6 @@
 const { remote, ipcRenderer } = require('electron');
 
 window.addEventListener('DOMContentLoaded', () => {
-
     document.getElementById("find").addEventListener("click", find);
 
     function find(){

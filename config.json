@@ -1,24 +1,43 @@
-{"ip":"192.168.1.56","token":"E3AClgkjopb5F1hIeIFXmzz3fxLZKLbe","mode":{
-
-    "type": {
-        "center": true,
-        "rightRotate": true,
-        "leftRotate" : true,
-        "backlaser": true,
-        "wall":true,
-        "bomb":true,
-        "bigRing":true,
-        "cut":true
-    },
-    "value": {
-        "off": true,
-        "blueFull": true,
-        "blueFadeIn": true,
-        "blueFadeOut": true,
-        "redFull": true,
-        "redFadeIn": true,
-        "redFadeOut": true
+{
+    "devices": [
+        {
+            "ip": "192.168.1.56",
+            "token": "rJZAlbTjAHMCLo1EElGQWrGZ87erMxnJ",
+            "auth": true,
+            "status": true
+        },
+        {
+            "ip": "192.168.1.71",
+            "token": null,
+            "auth": false,
+            "status": false
+        },
+        {
+            "ip": "192.168.1.89",
+            "token": null,
+            "auth": false,
+            "status": false
+        }
+    ],
+    "mode": {
+        "type": {
+            "center": true,
+            "rightRotate": true,
+            "leftRotate": true,
+            "backlaser": true,
+            "wall": true,
+            "bomb": true,
+            "bigRing": true,
+            "cut": true
+        },
+        "value": {
+            "off": true,
+            "blueFull": true,
+            "blueFadeIn": true,
+            "blueFadeOut": true,
+            "redFull": true,
+            "redFadeIn": true,
+            "redFadeOut": true
+        }
     }
-    
-}
 }
