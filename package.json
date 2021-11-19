@@ -24,6 +24,8 @@
     "arp": "^0.0.3",
     "axios": "^0.24.0",
     "bonjour": "^3.5.0",
+    "bytebuffer": "^5.0.1",
+    "dgram": "^1.0.1",
     "dotenv": "^10.0.0",
     "local-devices": "^3.0.0",
     "oui": "^11.0.90",
