@@ -34,10 +34,10 @@
             "off": true,
             "blueFull": true,
             "blueFadeIn": true,
-            "blueFadeOut": true,
+            "blueFadeOut": false,
             "redFull": true,
             "redFadeIn": true,
-            "redFadeOut": true
+            "redFadeOut": false
         }
     }
 }
