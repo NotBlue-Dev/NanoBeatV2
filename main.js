@@ -3,7 +3,6 @@ const nano = require('./lib')
 
 require('dotenv').config()
 
-
 const dev = (process.env.NODE_ENV === 'development')
 
 const start = (webContents) => {
@@ -24,8 +23,9 @@ const start = (webContents) => {
   const nanoleaf = new nano.nanoManager(
     new nano.IpFinder(),
     new nano.ConfigLoader(__dirname),
+    new nano.beatsaberAdaptater(),
     sendEvent,
-    listenEvent
+    listenEvent,
   )
   // temp
   setTimeout(() => {

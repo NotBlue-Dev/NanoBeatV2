@@ -7,7 +7,8 @@
         "wall":true,
         "bomb":true,
         "bigRing":true,
-        "cut":true
+        "cut":true,
+        "scene":true
     },
     "value": {
         "off": true,

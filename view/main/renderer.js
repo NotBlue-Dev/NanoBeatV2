@@ -19,9 +19,17 @@ window.addEventListener('DOMContentLoaded', () => {
             div.appendChild(a)
         });
     });
-
+    
     ipcRenderer.on('auth-succed', (event, arg) => {
-        console.log(arg)
+        console.log('auth succed')
+    });
+
+    ipcRenderer.on('bs-connected', (event, arg) => {
+        console.log("connected to bs")
+    });
+
+    ipcRenderer.on('bs-disconnected', (event, arg) => {
+        console.log("Disconnected from bs")
     });
 
     ipcRenderer.on('auth-failed', (event, arg) => {
