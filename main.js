@@ -6,6 +6,7 @@ require('dotenv').config()
 const dev = (process.env.NODE_ENV === 'development')
 
 const start = (webContents) => {
+  // Init nano lib
   const sendEvent = (channel, args) => {
     if ((typeof webContents.send) === 'function') {
       webContents.send(channel, args)
