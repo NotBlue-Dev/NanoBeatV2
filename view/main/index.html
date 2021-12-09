@@ -2,17 +2,68 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <link href="../style/style.css" rel="stylesheet">
+    <title>Nanobeat</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <a id="find">Find IP</a>
-    <div id="nano">
-    
+    <div id="navbar" class="sidenav">
+      <div class="header">
+        <img src="../img/logo.png" class="logo">
+        <a href="#" class="title">Nanobeat</a>
+      </div>
+      <a href="#" class="select">Dashboard</a>
+      <a href="../settings/index.html">Settings</a>
     </div>
+    
+    <div class="container">
+      <div id="frame">
+        <h1>Dashboard</h1>
+        <div class="pack">
+          <div class="bsBox">
+            <span class="dot"></span>
+            <a>Beatsaber running</a>
+          </div>
+          <a id="close">X</a>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="left">
+          <a class="semibold">Devices</a>
+          <a>You have {x} devices available</a>  
+        </div>
+        <div class="right">
+          <a>Refresh</a>
+          <img src="../img/refresh.png" class="refresh">
+        </div>
+      </div>
+
+      <div class="panelContainer">
+        <!-- <hr>
+        <div class="panel">
+        
+          <img src="../img/panels.png">
+
+          <div class="infoTXT">
+            <a class="semibold">Light Panels</a>
+            <a class="ip">192.168.1.1</a>
+          </div>
+
+          <div>
+            <span class="dot green"></span>
+            <a class="state">Connected</a>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+
+        </div> -->
+        
+      </div>
+    </div>
+    
   </body>
   <script src="./renderer.js"></script>
 </html>

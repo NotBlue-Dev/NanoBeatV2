@@ -1,10 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const nano = require('./lib')
 
-require('dotenv').config()
-
-const dev = (process.env.NODE_ENV === 'development')
-
 const start = (webContents) => {
   // Init nano lib
   const sendEvent = (channel, args) => {
@@ -37,8 +33,8 @@ const start = (webContents) => {
 
 const createWindow = () => {
     const mainWindow = new BrowserWindow({
-      width:685,
-      height:850,
+      width:1400,
+      height:900,
       resizable:false,
       minimizable : false,
       maximizable : false,
@@ -46,7 +42,7 @@ const createWindow = () => {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
-        enableRemoteModule: true,
+        enableRemoteModule: true
       },
       frame:false,
       title:'nanoleaf',
@@ -58,8 +54,6 @@ const createWindow = () => {
         })
     .catch((err) => console.error(err))
 }
-
-app.allowRendererProcessReuse = false;
 
 app.whenReady().then(() => {
   createWindow()

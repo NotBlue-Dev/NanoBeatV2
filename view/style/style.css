@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #404040;
+    margin: 0;
+    font-size: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #EEEEEE;
+}
+  
+.logo {
+    width: 20%;
+    padding: 15px 0px 15px 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #3BAF29;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#frame h1 {
+    margin-left: 7%;
+    font-size: 30px;
+}
+
+.dot {
+    height: 17px;
+    width: 17px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.green {
+    background-color: #11FF00 !important;
+}
+
+.left {
+    display: inline-grid;
+}
+
+.info {
+    align-items: center;
+    margin: 4% 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+}
+
+.right a {
+    margin-right: 15px;
+}
+
+.refresh {
+    width: 25px;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.bsBox {
+    font-size: 15px;
+    border: solid #707070 1px;
+    padding: 7px 20px;
+    border-radius: 100px;
+    display: flex;
+} 
+
+#close {
+    -webkit-app-region: no-drag;
+    margin-left: 6vh;
+}
+
+#close:hover {
+    color:#FF0000
+}
+
+.pack {
+    display: flex;
+    align-items: center;
+    margin-right: 6vh;
+}
+
+.bsBox a {
+    margin-left: 10px;
+}
+
+#frame {
+    -webkit-app-region: drag;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    margin-left: 280px;
+}
+
+.select {
+    background-color:rgba(151, 151, 151, 0.08)
+}
+
+.sidenav a:not(.title) {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 20px 30px 20px;
+    color: #404040;
+    display: block;
+}
+
+  
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #3BAF29;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #3BAF29;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.ip {
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+.state {
+    margin-left: 8px;
+}
+
+.panel img {
+    width: 115px;
+}
+
+.infoTXT {
+    display: flex;
+    flex-flow: column;
+}
+
+.panelContainer hr {
+    margin-left:7%;
+    margin-right: 7%;
+}
+
+.panel {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    align-items: center;
+    margin-left: 10%;
+    display: flex;
+    justify-content:space-between;
+    margin-right: 11%;
+}
+
+.spaceR {
+    margin-right: 10vh;
+}
+
+.titleSettings {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+.settings hr {
+    margin-bottom: 30px;
+}
+
+.settings {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.itemSettings {
+    display: flex;
+    justify-content: space-between;
+}
