@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/NotBlue-Dev/NanoBeatV2#readme",
   "devDependencies": {
-    "electron": "^15.3.0"
+    "electron": "^15.3.0",
+    "electron-packager": "^15.4.0"
   },
   "dependencies": {
     "arp": "^0.0.3",

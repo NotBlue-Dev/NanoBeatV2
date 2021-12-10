@@ -267,6 +267,10 @@ border-radius: 50%;
     margin-right: 10vh;
 }
 
+.infoset {
+    margin-top: 10px;
+}
+
 .titleSettings {
     display: flex;
     flex-direction: column;
@@ -281,9 +285,11 @@ border-radius: 50%;
 .settings {
     margin-left: 7%;
     margin-right: 7%;
+    margin-bottom: 50px;
 }
 
 .itemSettings {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 31% 54%;
 }

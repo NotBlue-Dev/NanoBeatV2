@@ -12,7 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
         ipcRenderer.send('close')
     }); 
 
-    document.getElementById("refresh").addEventListener("click", ipcRenderer.send('find-ip'));
+    document.getElementById("refresh").addEventListener("click", () => {
+        ipcRenderer.send('find-ip')
+    });
 
     ipcRenderer.on('bs-connected', (event, arg) => {
         bsIndic.classList.add('green')
@@ -26,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ipcRenderer.on('nano-avalaible', (event, arg) => {
         clear()
+        console.log('nano')
         arg.forEach(element => {
             let authbool = false
             let state = false
@@ -60,21 +63,29 @@ window.addEventListener('DOMContentLoaded', () => {
         txtPop.innerHTML = "Auth Succed, Now you can use this panel with nanobeat"
     });
 
-
     ipcRenderer.on('auth-failed', (event, arg) => {
         console.log('auth failed')
         showback(false)
         txtPop.innerHTML = "Auth Failed, make sure your panel was in auth mode !"
     });
 
-    // first run 
-    ipcRenderer.on('ready', () => {
+    // reload/switch
+    ipcRenderer.on('ready',() => {
         ipcRenderer.send('get-data');
+        ipcRenderer.send('find-ip')
     })
 
-    // reload/switch
+
     ipcRenderer.send('get-data');
+
+
 });
+
+console.log('la')
+
+function search() {
+    ipcRenderer.send('find-ip')
+}
 
 function showback(reload) {
     const container = document.getElementById('cont')
@@ -156,6 +167,7 @@ function createPanels(ip,states,auth) {
     input.checked = states
     input.onclick = () => {
         ipcRenderer.send('change-panel-status',[ip,input.checked]);
+        ipcRenderer.send('save-config');
     }
     let span = document.createElement('span');
     span.classList.add('slider')
@@ -177,9 +189,5 @@ function authRender(ip) {
     container.classList.add('opac')
     pop.classList.remove('hide')
 }
-
-    // ipcRenderer.on('game-ip-defined', (event, arg) => {
-    //     console.log(arg)
-    // });
 
 // });
