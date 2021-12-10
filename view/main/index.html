@@ -6,6 +6,7 @@
     <title>Nanobeat</title>
   </head>
   <body>
+    <div id="hover">
     <div id="navbar" class="sidenav">
       <div class="header">
         <img src="../img/logo.png" class="logo">
@@ -15,12 +16,18 @@
       <a href="../settings/index.html">Settings</a>
     </div>
     
-    <div class="container">
+    <div class="popup hide" id="pop">
+      <div class="containerPop">
+        <a class="txtPop" id="txtPop">Hold the power button of your nanoleaf for 5 seconds</a>
+      </div>
+    </div>
+
+    <div class="container" id="cont">
       <div id="frame">
         <h1>Dashboard</h1>
         <div class="pack">
           <div class="bsBox">
-            <span class="dot"></span>
+            <span class="dot" id="indic"></span>
             <a>Beatsaber running</a>
           </div>
           <a id="close">X</a>
@@ -30,38 +37,18 @@
       <div class="info">
         <div class="left">
           <a class="semibold">Devices</a>
-          <a>You have {x} devices available</a>  
+          <a id="count">You have {x} devices available</a>  
         </div>
-        <div class="right">
-          <a>Refresh</a>
+        <div class="right" id="refresh">
+          <a>Search</a>
           <img src="../img/refresh.png" class="refresh">
         </div>
       </div>
 
-      <div class="panelContainer">
-        <!-- <hr>
-        <div class="panel">
-        
-          <img src="../img/panels.png">
-
-          <div class="infoTXT">
-            <a class="semibold">Light Panels</a>
-            <a class="ip">192.168.1.1</a>
-          </div>
-
-          <div>
-            <span class="dot green"></span>
-            <a class="state">Connected</a>
-          </div>
-
-          <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider round"></span>
-          </label>
-
-        </div> -->
-        
+      <div class="panelContainer" id="pContain">
+      
       </div>
+    </div>
     </div>
     
   </body>

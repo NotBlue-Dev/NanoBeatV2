@@ -29,6 +29,7 @@ const start = (webContents) => {
     nanoleaf.start()
   }, 500);
 
+
 }
 
 const createWindow = () => {
@@ -55,6 +56,8 @@ const createWindow = () => {
     .catch((err) => console.error(err))
 }
 
+app.allowRendererProcessReuse = false;
+
 app.whenReady().then(() => {
   createWindow()
   app.on('activate', function () {
@@ -65,3 +68,7 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
   process.platform !== 'darwin' && app.quit()
 })
+
+ipcMain.on('close', (evt, arg) => {
+   app.quit();
+});
