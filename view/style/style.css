@@ -93,6 +93,7 @@ body {
 #close {
     -webkit-app-region: no-drag;
     margin-left: 6vh;
+    cursor: pointer;
 }
 
 #close:hover {
