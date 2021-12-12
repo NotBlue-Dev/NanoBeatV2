@@ -19,3 +19,6 @@ https://www.youtube.com/watch?v=QIwdbeMchgQ
 # Dependencies
 
 https://github.com/opl-/beatsaber-http-status
+
+# Support me
+Just give me a star, that's help !
