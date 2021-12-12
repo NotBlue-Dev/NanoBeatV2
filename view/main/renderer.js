@@ -3,6 +3,7 @@ const { ipcRenderer } = require('electron');
 let auth = []
 let current = []
 let count = 0
+let authing = []
 
 window.addEventListener('DOMContentLoaded', () => {
     const bsIndic = document.getElementById('indic')
@@ -24,6 +25,10 @@ window.addEventListener('DOMContentLoaded', () => {
     ipcRenderer.on('bs-disconnected', (event, arg) => {
         bsIndic.classList.add('red')
         bsIndic.classList.remove('green')
+    });
+
+    ipcRenderer.on('log', (event, arg) => {
+        console.log(arg)
     });
 
     ipcRenderer.on('nano-avalaible', (event, arg) => {
@@ -58,15 +63,21 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     ipcRenderer.on('auth-succed', (event, arg) => {
-        console.log('auth succed')
-        showback(true)
-        txtPop.innerHTML = "Auth Succed, Now you can use this panel with nanobeat"
+        if(authing.includes(arg.ip)) {
+            console.log('auth succed')
+            showback(true)
+            txtPop.innerHTML = "Auth Succed, Now you can use this panel with nanobeat"
+        }
+        authing = []
     });
 
     ipcRenderer.on('auth-failed', (event, arg) => {
-        console.log('auth failed')
-        showback(false)
-        txtPop.innerHTML = "Auth Failed, make sure your panel was in auth mode !"
+        if(authing.includes(arg.ip)) {
+            console.log('auth failed')
+            showback(false)
+            txtPop.innerHTML = "Auth Failed, make sure your panel was in auth mode !"
+        }
+        authing = []
     });
 
     // reload/switch
@@ -181,10 +192,13 @@ function createPanels(ip,states,auth) {
 }
 
 function authRender(ip) {
+    const txtPop = document.getElementById('txtPop')
     const container = document.getElementById('cont')
     const pop = document.getElementById('pop')
     const cont = document.getElementById('hover')
     ipcRenderer.send('auth', ip);
+    txtPop.innerHTML = "Hold the power button of your nanoleaf for 5 seconds"
+    authing.push(ip)
     cont.classList.add('cover')
     container.classList.add('opac')
     pop.classList.remove('hide')
